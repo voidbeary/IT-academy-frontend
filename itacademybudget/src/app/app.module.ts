@@ -11,6 +11,8 @@ import { ExpensesComponent } from './expenses/expenses.component';
 import { HomeComponent } from './home/home.component';
 import { ExpenseDetailsComponent } from './expense-details/expense-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExpenceFormComponent } from './expenses/expense-form/expense-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     BudgetsComponent,
     ExpenseDetailsComponent,
+    ExpenceFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     BsDatepickerModule,
     ProgressbarModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

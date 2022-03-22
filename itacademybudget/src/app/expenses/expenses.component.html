@@ -1,27 +1,6 @@
 <h3>Add expense</h3>
 
-<form>
-  <div class="row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Expense name" />
-    </div>
-    <div class="col">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Date"
-        bsDatepicker
-        [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }"
-      />
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Amount" />
-    </div>
-    <div class="col">
-      <button class="btn btn-primary">Add</button>
-    </div>
-  </div>
-</form>
+<app-expense-form (expenseUpdated)="loadExpenses()"></app-expense-form>
 
 <h3 class="mt-5">Expenses list</h3>
 <table class="table mt-3">

@@ -14,7 +14,7 @@ export class ExpensesComponent implements OnInit {
 
   constructor(private expensesService: ExpensesService) {}
 
-  ngOnInit(): void {
+  loadExpenses(): void {
     this.expensesList$ = this.expensesService.loadExpenses().pipe(
       tap((expenses: Expense[]) => {
         expenses.map((item: Expense) => {
@@ -22,5 +22,9 @@ export class ExpensesComponent implements OnInit {
         });
       })
     );
+  }
+
+  ngOnInit(): void {
+    this.loadExpenses();
   }
 }
