@@ -12,11 +12,7 @@ export class ExpensesComponent implements OnInit {
 
   constructor(private expensesService: ExpensesService) {}
 
-  loadExpenses(): void {
-    this.expenses = this.expensesService.loadExpenses();
-  }
-
   ngOnInit(): void {
-    this.loadExpenses();
+    this.expenses = this.expensesService.loadExpenses();
   }
 }

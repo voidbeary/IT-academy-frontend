@@ -11,6 +11,6 @@ export class ExpensesService {
     return expensesList;
   }
   getExpense(id: string): Expense | undefined {
-    return expensesList.find((x) => x.id === id);
+    return expensesList.find((expense) => expense.id === id);
   }
 }
